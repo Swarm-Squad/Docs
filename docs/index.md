@@ -6,8 +6,8 @@ hero:
   name: "Swarm Squad"
   text: "A simulation framework for multi-agent systems."
   image:
-    light: /.vitepress/public/swarm_squad-W.svg
-    dark: /.vitepress/public/swarm_squad-B.svg
+    light: /swarm_squad-W.svg
+    dark: /swarm_squad-B.svg
     alt: logo
   actions:
     - theme: brand
@@ -19,33 +19,33 @@ hero:
 
 features:
   - icon: 
-      light: /.vitepress/public/drone-B.svg
-      dark: /.vitepress/public/drone-W.svg
+      light: /drone-B.svg
+      dark: /drone-W.svg
     title: Swarm Simulation
     details: Evaluate multi-agent systems with structured environment for swarm behavior.
   - icon: 
-      light: /.vitepress/public/dashboard-B.svg
-      dark: /.vitepress/public/dashboard-W.svg
+      light: /dashboard-B.svg
+      dark: /dashboard-W.svg
     title: Live Dashboards
     details: Visualize telemetry, missions, and system health with Plotly Dash.
   - icon:
-      light: /.vitepress/public/message-B.svg
-      dark: /.vitepress/public/message-W.svg
+      light: /message-B.svg
+      dark: /message-W.svg
     title: ZeroMQ Integration
     details: Enable efficient communication and coordination between distributed UAVs.
   - icon:
-      light: /.vitepress/public/chart-B.svg
-      dark: /.vitepress/public/chart-W.svg
+      light: /chart-B.svg
+      dark: /chart-W.svg
     title: 3D Visualization
     details: Integrate Mapbox for a 3D visualization of UAV swarm movements.
   - icon:
-      light: /.vitepress/public/database-B.svg
-      dark: /.vitepress/public/database-W.svg
+      light: /database-B.svg
+      dark: /database-W.svg
     title: SQLite Backend
     details: Provide a reliable and persistent storage solution for UAV information.
   - icon:
-      light: /.vitepress/public/system-B.svg
-      dark: /.vitepress/public/system-W.svg
+      light: /system-B.svg
+      dark: /system-W.svg
     title: Scalable System
     details: Adapting dynamically to various network configurations.
 ---
