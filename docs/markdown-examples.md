@@ -80,6 +80,24 @@ This is a dangerous warning.
 This is a details block.
 :::
 
+## Math Equation
+
+### Inline style
+$a^2 + b^2 =c^2$
+
+### Display style
+$$
+  a = \frac{b+c}{d}
+$$ 
+
+### Display style with custom environment
+$$
+  \begin{array}{lcl}
+      a + b + c + d & = & e + f + \\
+                    &   & g + h
+  \end{array}
+$$ 
+
 ## More
 
 Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
