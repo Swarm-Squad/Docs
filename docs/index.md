@@ -6,8 +6,8 @@ hero:
   name: "Swarm Squad"
   text: "A simulation framework for multi-agent systems."
   image:
-    light: /swarm_squad-W.svg
-    dark: /swarm_squad-B.svg
+    light: /favicon.ico
+    dark: /favicon.ico
     alt: logo
   actions:
     - theme: brand
