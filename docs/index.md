@@ -15,7 +15,7 @@ hero:
       link: /markdown-examples
     - theme: alt
       text: View Demo
-      link: https://swarm-squad.vercel.app/
+      link: https://swarm-squad.com/gallery
 
 features:
   - icon: 
