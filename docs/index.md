@@ -34,8 +34,8 @@ features:
     title: ZeroMQ Integration
     details: Enable efficient communication and coordination between distributed UAVs.
   - icon:
-      light: /chart-B.svg
-      dark: /chart-W.svg
+      light: /3dobj-B.svg
+      dark: /3dobj-W.svg
     title: 3D Visualization
     details: Integrate Mapbox for a 3D visualization of UAV swarm movements.
   - icon:
