@@ -106,52 +106,15 @@
   --vp-home-hero-image-filter: blur(44px);
 }
 
-@font-face {
-  font-family: 'IndieFlower';
-  src: url('/IndieFlower-Regular.ttf') format('truetype');
-}
-
-@media (min-width: 320px) {
-  .VPHero.has-image .text {
-    font-size: 20px;
-    font-family: 'IndieFlower';
-  }
-  
-  .clip{
-    font-size: 40px;
-    font-family: 'IndieFlower';
-  }
-}
-
 @media (min-width: 640px) {
   :root {
     --vp-home-hero-image-filter: blur(56px);
-  }
-
-  .VPHero.has-image .text {
-    font-size: 40px;
-    font-family: 'IndieFlower';
-  }
-  
-  .clip{
-    font-size: 60px;
-    font-family: 'IndieFlower';
   }
 }
 
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: blur(68px);
-  }
-
-  .VPHero.has-image .text {
-    font-size: 50px;
-    font-family: 'IndieFlower';
-  }
-  
-  .clip{
-    font-size: 70px;
-    font-family: 'IndieFlower';
   }
 }
 
