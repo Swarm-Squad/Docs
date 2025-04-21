@@ -6,7 +6,13 @@ export default defineConfig({
   title: 'Swarm Squad',
   description: 'A simulation framework for multi-agent systems.',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-  markdown: { math: true },
+  markdown: {
+    math: true,
+    theme: {
+      light: 'github-light',
+      dark: 'one-dark-pro'
+    }
+  },
   appearance: 'dark',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
