@@ -13,15 +13,19 @@
 We recommend using Node Version Manager (NVM) to install Node.js:
 
 1. **Install NVM:**
+
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
    ```
+
    or
+
    ```bash
    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
    ```
 
 2. **Install Node.js:**
+
    ```bash
    nvm install 22
    nvm use 22
@@ -36,27 +40,31 @@ We recommend using Node Version Manager (NVM) to install Node.js:
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/Swarm-Squad/Docs.git
    cd Docs
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Run the development server:**
+
    ```bash
-   npm run dev
+   npm run docs:dev
    ```
 
 4. **Building for Production:**
+
    ```bash
-   npm run build
+   npm run docs:build
    ```
 
 5. **Preview Production Build:**
    ```bash
-   npm run preview
+   npm run docs:preview
    ```

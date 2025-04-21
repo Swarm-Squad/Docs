@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Swarm Squad"
-  text: "A simulation framework for multi-agent systems."
+  name: 'Swarm Squad'
+  text: 'A simulation framework for multi-agent systems.'
   image:
     light: /favicon.ico
     dark: /favicon.ico
@@ -12,41 +12,28 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /markdown-examples
+      link: /intro
     - theme: alt
       text: View Demo
-      link: https://swarm-squad.com/gallery
+      link: /gallery
 
 features:
-  - icon: 
-      light: /drone-B.svg
-      dark: /drone-W.svg
+  - icon: 🕹️
     title: Swarm Simulation
     details: Evaluate multi-agent systems with structured environment for swarm behavior.
-  - icon: 
-      light: /dashboard-B.svg
-      dark: /dashboard-W.svg
+  - icon: 📊
     title: Live Dashboards
     details: Visualize telemetry, missions, and system health with Plotly Dash.
-  - icon:
-      light: /message-B.svg
-      dark: /message-W.svg
-    title: ZeroMQ Integration
-    details: Enable efficient communication and coordination between distributed UAVs.
-  - icon:
-      light: /3dobj-B.svg
-      dark: /3dobj-W.svg
+  - icon: 🗺️
     title: 3D Visualization
     details: Integrate Mapbox for a 3D visualization of UAV swarm movements.
-  - icon:
-      light: /database-B.svg
-      dark: /database-W.svg
-    title: SQLite Backend
-    details: Provide a reliable and persistent storage solution for UAV information.
-  - icon:
-      light: /system-B.svg
-      dark: /system-W.svg
+  - icon: 🔗
+    title: Modular Messaging Layer
+    details: Support customizable communication frameworks for inter-agent coordination.
+  - icon: 🗃️
+    title: Lightweight Data Store
+    details: Store mission logs and agent metadata using embedded databases.
+  - icon: 🛸
     title: Scalable System
     details: Adapting dynamically to various network configurations.
 ---
-

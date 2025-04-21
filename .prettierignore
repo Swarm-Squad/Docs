@@ -1,0 +1,7 @@
+*.vue
+dist
+cache
+template
+temp
+!CHANGELOG.md
+.temp
