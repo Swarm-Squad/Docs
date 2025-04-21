@@ -43,7 +43,37 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+/* Base colors for shadcn-inspired theme */
 :root {
+  /* Base colors */
+  --vp-c-white: #ffffff;
+  --vp-c-black: #09090b;
+  
+  /* Gray palette */
+  --vp-c-gray-1: #f9fafb;
+  --vp-c-gray-2: #e5e7eb;
+  --vp-c-gray-3: #d1d5db;
+  --vp-c-gray-soft: rgba(249, 250, 251, 0.14);
+  
+  /* Brand colors - Purple with slight blue tint */
+  --vp-c-indigo-1: #6999d1;
+  --vp-c-indigo-2: #2b79d3;
+  --vp-c-indigo-3: #5971cd;
+  --vp-c-indigo-soft: rgba(99, 102, 241, 0.14);
+  
+  /* Warning colors */
+  --vp-c-yellow-1: #fef08a;
+  --vp-c-yellow-2: #facc15;
+  --vp-c-yellow-3: #eab308;
+  --vp-c-yellow-soft: rgba(234, 179, 8, 0.14);
+  
+  /* Danger colors */
+  --vp-c-red-1: #fca5a5;
+  --vp-c-red-2: #f87171;
+  --vp-c-red-3: #ef4444;
+  --vp-c-red-soft: rgba(239, 68, 68, 0.14);
+  
+  /* Default mode assignments */
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -70,6 +100,44 @@
   --vp-c-danger-soft: var(--vp-c-red-soft);
 }
 
+/* Dark theme customization */
+.dark {
+  /* Background colors */
+  --vp-c-bg: var(--vp-c-black);
+  --vp-c-bg-alt: #09090b;
+  --vp-c-bg-elv: #27272a;
+  --vp-c-bg-soft: #27272a;
+  
+  /* Text colors */
+  --vp-c-text-1: var(--vp-c-white);
+  --vp-c-text-2: #a1a1aa;
+  --vp-c-text-3: #71717a;
+  
+  /* Divider colors */
+  --vp-c-divider: #3f3f46;
+  --vp-c-divider-light: #27272a;
+  
+  /* Shadows */
+  --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --vp-shadow-2: 0 3px 6px rgba(0, 0, 0, 0.5);
+  --vp-shadow-3: 0 12px 24px rgba(0, 0, 0, 0.5);
+  --vp-shadow-4: 0 24px 32px rgba(0, 0, 0, 0.5);
+  --vp-shadow-5: 0 32px 48px rgba(0, 0, 0, 0.5);
+  
+  /* Sidebar */
+  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+  --vp-sidebar-width: 272px;
+  
+  /* Navbar */
+  --vp-nav-bg-color: var(--vp-c-bg);
+  --vp-nav-height: 64px;
+  
+  /* Local search box */
+  --vp-local-search-bg: var(--vp-c-bg-alt);
+  --vp-local-search-result-bg: var(--vp-c-bg-alt);
+  --vp-local-search-result-border: var(--vp-c-divider);
+}
+
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
@@ -84,6 +152,17 @@
   --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
+  
+  /* Alt button */
+  --vp-button-alt-border: var(--vp-c-divider);
+  --vp-button-alt-text: var(--vp-c-text-1);
+  --vp-button-alt-bg: var(--vp-c-bg-alt);
+  --vp-button-alt-hover-border: var(--vp-c-brand-3);
+  --vp-button-alt-hover-text: var(--vp-c-text-1);
+  --vp-button-alt-hover-bg: var(--vp-c-bg-alt);
+  --vp-button-alt-active-border: var(--vp-c-brand-3);
+  --vp-button-alt-active-text: var(--vp-c-text-1);
+  --vp-button-alt-active-bg: var(--vp-c-bg-alt);
 }
 
 /**
@@ -94,14 +173,14 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #6999d1 30%,
-    #5971cd
+    #6999d1 60%,
+    #5971cd 40%
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #6999d1 50%,
-    #5971cd 50%
+    #6999d1 60%,
+    #5971cd 40%
   );
   --vp-home-hero-image-filter: blur(44px);
 }
@@ -127,6 +206,69 @@
   --vp-custom-block-tip-text: var(--vp-c-text-1);
   --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+
+  /* Info block - light blue */
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-text: #213547;
+  --vp-custom-block-info-bg: rgba(97, 175, 239, 0.3);  /* #61AFEF */
+  --vp-custom-block-info-code-bg: rgba(97, 175, 239, 0.1);
+  
+  /* Tip block - light green */
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #213547;
+  --vp-custom-block-tip-bg: rgba(152, 195, 121, 0.3);  /* #98C379 */
+  --vp-custom-block-tip-code-bg: rgba(152, 195, 121, 0.1);
+  
+  /* Warning block - pale yellow/gold */
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: #213547;
+  --vp-custom-block-warning-bg: rgba(229, 192, 123, 0.3);  /* #E5C07B */
+  --vp-custom-block-warning-code-bg: rgba(229, 192, 123, 0.1);
+  
+  /* Danger block - coral/pink */
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: #213547;
+  --vp-custom-block-danger-bg: rgba(224, 108, 117, 0.3);  /* #E06C75 */
+  --vp-custom-block-danger-code-bg: rgba(224, 108, 117, 0.1);
+  
+  /* Details block - light gray */
+  --vp-custom-block-details-border: transparent;
+  --vp-custom-block-details-text: #213547;
+  --vp-custom-block-details-bg: rgba(171, 178, 191, 0.3);  /* #ABB2BF */
+  --vp-custom-block-details-code-bg: rgba(171, 178, 191, 0.1);
+}
+
+/* Custom block styles for dark mode */
+.dark {
+  /* Info block - light blue */
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-text: white;
+  --vp-custom-block-info-bg: rgba(97, 175, 239, 0.2);  /* #61AFEF */
+  --vp-custom-block-info-code-bg: rgba(97, 175, 239, 0.1);
+  
+  /* Tip block - light green */
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: white;
+  --vp-custom-block-tip-bg: rgba(152, 195, 121, 0.2);  /* #98C379 */
+  --vp-custom-block-tip-code-bg: rgba(152, 195, 121, 0.1);
+  
+  /* Warning block - pale yellow/gold */
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: white;
+  --vp-custom-block-warning-bg: rgba(229, 192, 123, 0.2);  /* #E5C07B */
+  --vp-custom-block-warning-code-bg: rgba(229, 192, 123, 0.1);
+  
+  /* Danger block - coral/pink */
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: white;
+  --vp-custom-block-danger-bg: rgba(224, 108, 117, 0.2);  /* #E06C75 */
+  --vp-custom-block-danger-code-bg: rgba(224, 108, 117, 0.1);
+  
+  /* Details block - light gray */
+  --vp-custom-block-details-border: transparent;
+  --vp-custom-block-details-text: white;
+  --vp-custom-block-details-bg: rgba(171, 178, 191, 0.2);  /* #ABB2BF */
+  --vp-custom-block-details-code-bg: rgba(171, 178, 191, 0.1);
 }
 
 /**
@@ -135,4 +277,43 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/* Additional styles for shadcn-inspired hover effects */
+.dark .VPNavBarMenuLink:hover,
+.dark .VPNavBarMenuGroup:hover .button {
+  color: var(--vp-c-brand-1);
+  transition: color 0.25s;
+}
+
+.dark .VPLink.link:hover {
+  color: var(--vp-c-brand-1);
+  transition: color 0.25s;
+}
+
+.dark .VPContent .container {
+  background-color: var(--vp-c-bg);
+}
+
+/* Code blocks in dark mode */
+.dark div[class*='language-'] {
+  background-color: #18181b;
+}
+
+/* Search interface customization */
+.dark .VPLocalSearchBox {
+  border-color: var(--vp-c-divider);
+}
+
+.dark .DocSearch-Modal {
+  background-color: var(--vp-c-bg-alt);
+  box-shadow: var(--vp-shadow-5);
+}
+
+.dark .DocSearch-Footer {
+  background-color: var(--vp-c-bg);
+}
+
+.dark .DocSearch-Hit {
+  background-color: var(--vp-c-bg-elv);
 }
