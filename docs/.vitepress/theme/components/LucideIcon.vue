@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps, h } from 'vue'
 import * as icons from 'lucide-vue-next'
 
 const props = defineProps({

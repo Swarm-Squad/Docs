@@ -89,6 +89,7 @@ uv run src/swarm_squad/main.py
 Swarm Squad Episode I includes several specialized components:
 
 - **Controllers**: Located in `src/swarm_squad/controllers/`
+
   - `base_controller.py`: Interface for all controllers
   - `behavior_controller.py`: Implements behavior-based control
   - `formation_controller.py`: Handles formation control algorithms
@@ -96,6 +97,7 @@ Swarm Squad Episode I includes several specialized components:
   - `controller_factory.py`: Manages controller instantiation and selection
 
 - **Models**: Located in `src/swarm_squad/models/`
+
   - `swarm_state.py`: Manages the state of the swarm formation
 
 - **GUI**: Located in `src/swarm_squad/gui/`

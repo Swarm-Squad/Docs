@@ -65,6 +65,19 @@ We recommend using Node Version Manager (NVM) to install Node.js:
    ```
 
 5. **Preview Production Build:**
+
    ```bash
    npm run docs:preview
+   ```
+
+6. **Check formatting:**
+
+   ```bash
+   npm run format:fail
+   npm run format
+   ```
+
+7. **Finalize build:**
+   ```bash
+   npm run check
    ```

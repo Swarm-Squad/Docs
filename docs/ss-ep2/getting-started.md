@@ -119,6 +119,7 @@ make clean
 Swarm Squad Episode II is organized into two main components:
 
 - **Frontend**: Located in the `frontend` directory
+
   - Built with Next.js, TypeScript, and Tailwind CSS
   - Provides the user interface and chat functionality
   - Communicates with the backend via API and WebSockets
