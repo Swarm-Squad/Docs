@@ -4,10 +4,10 @@ outline: deep
 
 <div align="center">
   <h1>Swarm Squad - Episode II: The Digital Dialogue</h1>
-  <h6><small>A continuation of our journey into real-time communication with enhanced features and user management.</small></h6>
+  <small>A continuation of our journey into real-time communication with enhanced features and user management.</small>
 </div>
 
-## Introduction
+---
 
 Swarm Squad Episode II: The Digital Dialogue expands the Swarm Squad ecosystem by focusing on real-time communication capabilities and user interaction. While the previous modules concentrated on agent simulation and formation control, Episode II shifts focus to the interface between human operators and agent systems, creating a more interactive and responsive platform.
 

@@ -2,7 +2,11 @@
 outline: deep
 ---
 
-# What is Swarm Squad?
+<div align="center">
+    <h1>What is Swarm Squad?</h1>
+</div>
+
+---
 
 Swarm Squad is a comprehensive simulation framework designed for multi-agent systems that I created to address the growing need for robust testing environments in autonomous agent research. The project emerged from my interest in swarm intelligence, distributed systems, and the challenges of coordinating multiple autonomous agents in complex environments.
 

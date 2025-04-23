@@ -19,6 +19,7 @@ export default defineConfig({
     }
   },
   appearance: 'dark',
+  cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -48,7 +49,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Swarm Squad Episode I',
+        text: 'Swarm Squad Ep I',
         collapsed: true,
         items: [
           { text: 'Getting Started', link: '/ss-ep1/getting-started' },
@@ -58,7 +59,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Swarm Squad Episode II',
+        text: 'Swarm Squad Ep II',
         collapsed: true,
         items: [
           { text: 'Getting Started', link: '/ss-ep2/getting-started' },
@@ -72,8 +73,8 @@ export default defineConfig({
         items: [
           { text: 'Gallery', link: '/gallery' },
           { text: 'Swarm Squad', link: '/ss/demo' },
-          { text: 'Swarm Squad Episode I', link: '/ss-ep1/demo' },
-          { text: 'Swarm Squad Episode II', link: '/ss-ep2/demo' }
+          { text: 'Swarm Squad Ep I', link: '/ss-ep1/demo' },
+          { text: 'Swarm Squad Ep II', link: '/ss-ep2/demo' }
         ]
       },
       {

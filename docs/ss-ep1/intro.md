@@ -3,11 +3,11 @@ outline: deep
 ---
 
 <div align="center">
-<h1>Swarm Squad: Episode I – Surviving the Jam</h1>
-<h6>A hybrid control architecture combining behavior-based formation control with LLM-powered decision making for autonomous multi-agent systems.</h6>
+    <h1>Swarm Squad: Episode I – Surviving the Jam</h1>
+    <small>A hybrid control architecture combining behavior-based formation control with LLM-powered decision making for autonomous multi-agent systems.</small>
 </div>
 
-## Introduction
+---
 
 Swarm Squad Episode I represents a significant evolution in the Swarm Squad project, focusing on the critical challenge of maintaining formation control and mission objectives in environments with communication constraints. This module implements a hybrid control architecture that combines traditional behavior-based formation control techniques with the strategic guidance of Large Language Models (LLMs).
 

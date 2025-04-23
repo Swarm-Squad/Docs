@@ -4,10 +4,10 @@ outline: deep
 
 <div align="center">
    <h1>Swarm Squad</h1>
-   <h6>A simulation framework for multi-agent systems.</h6>
+   <small>A simulation framework for multi-agent systems.</small>
 </div>
 
-## Overview
+---
 
 Swarm Squad is the foundational module of the Swarm Squad project, providing a robust framework for simulating and analyzing multi-agent systems. It implements core functionality for agent modeling, environment simulation, and visualization, serving as the base platform upon which the more specialized Episode I and Episode II modules are built.
 
