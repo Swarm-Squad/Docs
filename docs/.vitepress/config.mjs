@@ -6,7 +6,11 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Swarm Squad',
   description: 'A simulation framework for multi-agent systems.',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+  ],
   markdown: {
     math: true,
     theme: {
