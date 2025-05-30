@@ -34,48 +34,48 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           { text: 'What is Swarm Squad?', link: '/intro' },
-          { text: 'Swarm Squad', link: '/ss/intro' },
-          { text: 'Swarm Squad Episode I', link: '/ss-ep1/intro' },
-          { text: 'Swarm Squad Episode II', link: '/ss-ep2/intro' }
+          { text: 'Swarm Squad', link: '/swarm-squad/intro' },
+          { text: 'Swarm Squad Episode I', link: '/swarm-squad-ep1/intro' },
+          { text: 'Swarm Squad Episode II', link: '/swarm-squad-ep2/intro' }
         ]
       },
       {
         text: 'Swarm Squad',
         collapsed: true,
         items: [
-          { text: 'Getting Started', link: '/ss/getting-started' },
-          { text: 'Architecture', link: '/ss/architecture' },
-          { text: 'Configuration', link: '/ss/configuration' },
-          { text: 'Changelog', link: '/ss/changelog' }
+          { text: 'Getting Started', link: '/swarm-squad/getting-started' },
+          { text: 'Architecture', link: '/swarm-squad/architecture' },
+          { text: 'Configuration', link: '/swarm-squad/configuration' },
+          { text: 'Changelog', link: '/swarm-squad/changelog' }
         ]
       },
       {
         text: 'Swarm Squad Ep I',
         collapsed: true,
         items: [
-          { text: 'Getting Started', link: '/ss-ep1/getting-started' },
-          { text: 'Architecture', link: '/ss-ep1/architecture' },
-          { text: 'Configuration', link: '/ss-ep1/configuration' },
-          { text: 'Changelog', link: '/ss-ep1/changelog' }
+          { text: 'Getting Started', link: '/swarm-squad-ep1/getting-started' },
+          { text: 'Architecture', link: '/swarm-squad-ep1/architecture' },
+          { text: 'Configuration', link: '/swarm-squad-ep1/configuration' },
+          { text: 'Changelog', link: '/swarm-squad-ep1/changelog' }
         ]
       },
       {
         text: 'Swarm Squad Ep II',
         collapsed: true,
         items: [
-          { text: 'Getting Started', link: '/ss-ep2/getting-started' },
-          { text: 'Architecture', link: '/ss-ep2/architecture' },
-          { text: 'Configuration', link: '/ss-ep2/configuration' },
-          { text: 'Changelog', link: '/ss-ep2/changelog' }
+          { text: 'Getting Started', link: '/swarm-squad-ep2/getting-started' },
+          { text: 'Architecture', link: '/swarm-squad-ep2/architecture' },
+          { text: 'Configuration', link: '/swarm-squad-ep2/configuration' },
+          { text: 'Changelog', link: '/swarm-squad-ep2/changelog' }
         ]
       },
       {
         text: 'Demo',
         items: [
           { text: 'Gallery', link: '/gallery' },
-          { text: 'Swarm Squad', link: '/ss/demo' },
-          { text: 'Swarm Squad Ep I', link: '/ss-ep1/demo' },
-          { text: 'Swarm Squad Ep II', link: '/ss-ep2/demo' }
+          { text: 'Swarm Squad', link: '/swarm-squad/demo' },
+          { text: 'Swarm Squad Ep I', link: '/swarm-squad-ep1/demo' },
+          { text: 'Swarm Squad Ep II', link: '/swarm-squad-ep2/demo' }
         ]
       },
       {

@@ -10,7 +10,7 @@ outline: deep
       <LucideIcon name="Github" />
       Repository
     </a>
-    <a href="/ss/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+    <a href="/swarm-squad/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
       <LucideIcon name="Rocket" />
       Getting Started
     </a>
@@ -33,7 +33,7 @@ outline: deep
       <LucideIcon name="Github" />
       Repository
     </a>
-    <a href="/ss-ep1/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+    <a href="/swarm-squad-ep1/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
       <LucideIcon name="Rocket" />
       Getting Started
     </a>
@@ -62,7 +62,7 @@ outline: deep
       <LucideIcon name="Github" />
       Repository
     </a>
-    <a href="/ss-ep2/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+    <a href="/swarm-squad-ep2/getting-started" style="display: inline-flex; align-items: center; gap: 0.25rem;">
       <LucideIcon name="Rocket" />
       Getting Started
     </a>
