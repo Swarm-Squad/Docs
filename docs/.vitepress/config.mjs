@@ -13,6 +13,7 @@ export default defineConfig({
   ],
   markdown: {
     math: true,
+    headers: true,
     theme: {
       light: 'github-light',
       dark: 'one-dark-pro'
