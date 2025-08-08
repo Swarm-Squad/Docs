@@ -137,7 +137,7 @@ swarm-squad-ep2 webui
 swarm-squad-ep2 webui --port 3001
 ```
 
-#### Development and Setup Commands
+#### Development and Simulation Commands
 
 ```bash
 # Install frontend dependencies (development only)
@@ -147,13 +147,13 @@ swarm-squad-ep2 install
 swarm-squad-ep2 build
 
 # Run vehicle simulation components
-swarm-squad-ep2 setup
+swarm-squad-ep2 sim
 
 # Run with matplotlib visualization
-swarm-squad-ep2 setup visualize
+swarm-squad-ep2 sim visualize
 
 # Run WebSocket test client
-swarm-squad-ep2 setup test
+swarm-squad-ep2 sim test
 ```
 
 ## Development Setup
@@ -185,30 +185,81 @@ swarm-squad-ep2 launch
 Understanding the Swarm Squad Episode II file structure will help you navigate and extend the framework:
 
 ```
-📂 Swarm Squad Episode II
-┣ 📂 frontend/                 # Next.js React application
-┃ ┣ 📂 src/                    # Source code
-┃ ┃ ┣ 📂 components/           # React components
-┃ ┃ ┣ 📂 pages/                # Next.js pages
-┃ ┃ ┣ 📂 styles/               # CSS and styling
-┃ ┃ ┣ 📂 utils/                # Utility functions
-┃ ┃ ┗ 📂 hooks/                # Custom React hooks
-┃ ┣ 📄 package.json            # Frontend dependencies
-┃ ┣ 📄 tailwind.config.js      # Tailwind CSS configuration
-┃ ┗ 📄 next.config.js          # Next.js configuration
-┣ 📂 backend/                  # FastAPI Python application
-┃ ┣ 📂 fastapi/                # FastAPI application
-┃ ┃ ┣ 📂 routers/              # API route handlers
-┃ ┃ ┣ 📂 models/               # Data models
-┃ ┃ ┣ 📂 services/             # Business logic
-┃ ┃ ┗ 📄 main.py               # FastAPI application entry point
-┃ ┣ 📂 scripts/                # Utility scripts
-┃ ┗ 📄 requirements.txt        # Python dependencies
-┣ 📂 src/swarm_squad_ep2/      # Core package
-┃ ┣ 📂 cli/                    # Command-line interface
-┃ ┗ 📄 __init__.py             # Package initialization
-┣ 📄 pyproject.toml            # Python project configuration
-┗ 📄 uv.lock                   # Dependency lock file
+📂 Swarm-Squad-Ep2
+┣ 📂 lib/                               # Project media/assets
+┃ ┣ 📄 banner.png
+┃ ┗ 📄 screenshot.png
+┣ 📂 src/
+┃ ┗ 📦 swarm_squad_ep2/                 # Python package
+┃   ┣ 📂 api/                           # FastAPI backend
+┃   ┃ ┣ 📂 routers/                     # Route handlers (REST + WS)
+┃   ┃ ┃ ┣ 📄 batch.py                   # Batch job endpoints
+┃   ┃ ┃ ┣ 📄 llms.py                    # LLM-facing routes
+┃   ┃ ┃ ┣ 📄 realtime.py                # WebSocket / SSE endpoints
+┃   ┃ ┃ ┣ 📄 veh2llm.py                 # Vehicle→LLM bridge routes
+┃   ┃ ┃ ┗ 📄 vehicles.py                # Vehicle CRUD/telemetry routes
+┃   ┃ ┣ 📂 static/                      # Static files (favicon, small assets)
+┃   ┃ ┃ ┗ 📄 favicon.ico
+┃   ┃ ┣ 📂 templates/                   # Jinja2 templates
+┃   ┃ ┃ ┗ 📄 index.html
+┃   ┃ ┣ 📄 database.py                  # DB session/engine + init
+┃   ┃ ┣ 📄 main.py                      # FastAPI app entrypoint
+┃   ┃ ┣ 📄 models.py                    # Pydantic/ORM models
+┃   ┃ ┗ 📄 utils.py                     # Shared backend helpers
+┃   ┣ 📂 cli/                           # Command-line tools
+┃   ┃ ┣ 📄 build.py                     # Build/package helpers
+┃   ┃ ┣ 📄 fastapi.py                   # Start API server CLI
+┃   ┃ ┣ 📄 install.py                   # Dev/install helpers
+┃   ┃ ┣ 📄 launch.py                    # One-shot launcher
+┃   ┃ ┣ 📄 sim.py                       # Run simulations via CLI
+┃   ┃ ┣ 📄 utils.py                     # CLI utilities
+┃   ┃ ┗ 📄 webui.py                     # Launch frontend from CLI
+┃   ┣ 📂 scripts/                       # Standalone scripts
+┃   ┃ ┣ 📂 utils/
+┃   ┃ ┃ ┣ 📄 client.py                  # HTTP/WebSocket client helpers
+┃   ┃ ┃ ┗ 📄 message_templates.py       # Prompt/message templates
+┃   ┃ ┣ 📄 run_simulation.py            # Scripted sim runner
+┃   ┃ ┣ 📄 simulator.py                 # Simulation engine
+┃   ┃ ┣ 📄 test_client.py               # Quick API/WS tests
+┃   ┃ ┗ 📄 visualize_simulation.py      # Simple plotting/vis tools
+┃   ┣ 📂 web/                           # Next.js frontend
+┃   ┃ ┣ 📂 app/                         # Next.js (App Router) entry
+┃   ┃ ┃ ┣ 📄 globals.css
+┃   ┃ ┃ ┣ 📄 layout.tsx
+┃   ┃ ┃ ┗ 📄 page.tsx
+┃   ┃ ┣ 📂 components/                  # React components (incl. ui/)
+┃   ┃ ┃ ┣ 📂 ui
+┃   ┃ ┃ ┣ 📄 category-header.tsx
+┃   ┃ ┃ ┣ 📄 chat.tsx
+┃   ┃ ┃ ┣ 📄 emoji-picker.tsx
+┃   ┃ ┃ ┣ 📄 message-input.tsx
+┃   ┃ ┃ ┣ 📄 sidebar.tsx
+┃   ┃ ┃ ┣ 📄 theme-provider.tsx
+┃   ┃ ┃ ┗ 📄 theme-toggle.tsx
+┃   ┃ ┣ 📂 hooks/                       # Frontend hooks
+┃   ┃ ┃ ┣ 📄 use-mobile.tsx
+┃   ┃ ┃ ┣ 📄 use-toast.ts
+┃   ┃ ┃ ┗ 📄 use-websocket.ts
+┃   ┃ ┣ 📂 lib/                         # Frontend utils
+┃   ┃ ┃ ┣ 📄 api.ts
+┃   ┃ ┃ ┣ 📄 mock-data.ts               # Dev-only
+┃   ┃ ┃ ┗ 📄 utils.ts
+┃   ┃ ┣ 📂 public/
+┃   ┃ ┃ ┗ 📄 favicon.ico
+┃   ┃ ┣ 📄 next.config.mjs
+┃   ┃ ┣ 📄 package.json
+┃   ┃ ┣ 📄 tailwind.config.ts
+┃   ┃ ┣ 📄 postcss.config.mjs
+┃   ┃ ┣ 📄 tsconfig.json
+┃   ┃ ┗ 📄 pnpm-lock.yaml
+┃   ┗ 📄 main.py                        # Package-level entry
+┣ 📄 pyproject.toml                     # Python project config
+┣ 📄 uv.lock                            # Python deps lock
+┣ 📄 README.md                          # Overview and quickstart
+┣ 📄 LICENSE                            # License
+┣ 📄 .python-version                    # Python toolchain pin
+┣ 📄 .pre-commit-config.yaml            # Lint/format hooks
+┗ 📄 .gitignore                         # Ignore rules
 ```
 
 ## Key Components
@@ -268,13 +319,13 @@ Swarm Squad Episode II includes vehicle simulation capabilities:
 
 ```bash
 # Run basic vehicle simulation
-swarm-squad-ep2 setup
+swarm-squad-ep2 sim
 
 # Run simulation with matplotlib visualization
-swarm-squad-ep2 setup visualize
+swarm-squad-ep2 sim visualize
 
 # Test WebSocket connections
-swarm-squad-ep2 setup test
+swarm-squad-ep2 sim test
 ```
 
 ## Configuration
